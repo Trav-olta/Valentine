@@ -31,8 +31,21 @@
 
   <h1>Will you be my Valentine? 💖</h1>
 
-  <button class="yes" onclick="location.href='yes.html'">Yes 😍</button>
-  <button class="no" onclick="location.href='no.html'">No 😭</button>
+  <button class="yes" id="yesBtn" onclick="yesClicked()">Yes 😍</button>
+<button class="no" id="noBtn" onclick="noClicked()">No 😭</button>
 
-</body>
-</html>
+<script>
+  function yesClicked() {
+    // Disable the No button
+    document.getElementById('noBtn').disabled = true;
+    // Go to Yes page
+    location.href = 'yes.html';
+  }
+
+  function noClicked() {
+    // Disable the Yes button
+    document.getElementById('yesBtn').disabled = true;
+    // Go to No page
+    location.href = 'no.html';
+  }
+</script>
